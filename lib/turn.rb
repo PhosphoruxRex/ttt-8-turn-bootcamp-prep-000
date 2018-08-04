@@ -14,6 +14,7 @@ end
 
 def move(board, index, token="X")
   board[index] = token
+  board
 end
 
 
@@ -21,8 +22,8 @@ def input_to_index(val)
   val.to_i - 1
 end
 
-# If the move is valid, make the move and display the board to the user.
-# If the move is invalid, ask for a new move until a valid move is received.
+
+
 def turn(board)
   # Asking the user for their move by position 1-9.
   puts "Please enter 1-9:"
@@ -30,8 +31,10 @@ def turn(board)
   input = gets
   # Convert position to an index.
   index = input_to_index(input)
+  # If the move is valid, make the move and display the board to the user.
   if valid_move?(board, index)
     move(board, index)
+  # If the move is invalid, ask for a new move until a valid move is received.
   else
     puts "Invalid entry! Try again..."
     turn(board)
