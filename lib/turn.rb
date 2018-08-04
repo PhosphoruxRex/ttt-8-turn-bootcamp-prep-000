@@ -19,7 +19,6 @@ end
 
 def input_to_index(val)
   val.to_i - 1
-
 end
 
 # If the move is valid, make the move and display the board to the user.
@@ -30,8 +29,8 @@ def turn(board)
   # Receiving the user input.
   input = gets
   # Convert position to an index.
-  input_to_index(input)
-  if (input >= 0) && (input <= 8)
+  index = input_to_index(input)
+  if valid_move?(board, index)
     move(board, input)
   else
     puts "Invalid entry! Try again..."
