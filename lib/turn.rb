@@ -1,5 +1,9 @@
 def display_board(board)
-  puts board
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def valid_move(board, index)
@@ -12,8 +16,15 @@ def move(board, index, token="X")
   board[index-1] = token
 end
 
+
+
+# If the move is valid, make the move and display the board to the user.
+# If the move is invalid, ask for a new move until a valid move is received.
 def turn(board)
+  # Asking the user for their move by position 1-9.
   puts "Please enter 1-9:"
+  # Receiving the user input.
+  # Convert position to an index.
   input = gets - 1
   if (input >= 0) && (input <= 8)
     move(board, input)
