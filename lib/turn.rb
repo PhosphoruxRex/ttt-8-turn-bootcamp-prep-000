@@ -21,4 +21,5 @@ def turn(board)
     puts "Invalid entry! Try again..."
     input = turn(board)
     move(board, input)
+  end
 end
