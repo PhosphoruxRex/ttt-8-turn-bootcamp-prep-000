@@ -14,10 +14,11 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets
-  if (input >= 1) && (input <= 9)
-    input
+  input = gets - 1
+  if (input >= 0) && (input <= 8)
+    move(board, input, token)
   else
     puts "Invalid entry! Try again..."
     input = turn(board)
+
 end
