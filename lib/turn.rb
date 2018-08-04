@@ -19,7 +19,7 @@ end
 
 def input_to_index(val)
   val.to_i - 1
-  
+
 end
 
 # If the move is valid, make the move and display the board to the user.
