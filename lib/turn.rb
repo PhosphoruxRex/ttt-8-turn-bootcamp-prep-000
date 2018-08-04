@@ -31,10 +31,10 @@ def turn(board)
   # Convert position to an index.
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, input)
+    move(board, index)
   else
     puts "Invalid entry! Try again..."
-    input = turn(board)
-    move(board, input)
+    index = turn(board)
+    move(board, index)
   end
 end
