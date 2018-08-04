@@ -38,5 +38,6 @@ def turn(board)
   else
     puts "Invalid entry! Try again..."
     turn(board)
+    display_board(board)
   end
 end
