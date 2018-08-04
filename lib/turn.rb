@@ -34,7 +34,6 @@ def turn(board)
     move(board, index)
   else
     puts "Invalid entry! Try again..."
-    index = turn(board)
-    move(board, index)
+    turn(board)
   end
 end
